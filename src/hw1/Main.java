@@ -55,7 +55,8 @@ public class Main {
                 word[i] = word[word.length-1 - i];
                 word[word.length-1 - i] = buf;
             }
-            System.out.print(String.valueOf(word)+" ");
+            for(char c:word)System.out.print(c);
+            System.out.print(" ");
         }
         System.out.println();
     }
