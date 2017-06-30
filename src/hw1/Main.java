@@ -22,12 +22,9 @@ public class Main {
         if (longmas.size() >= 2) {
             int min, almost;
             if (longmas.get(0) > longmas.get(1)) {
-                min = 1;
-                almost = 0;
-            } else {
-                almost = 1;
-                min = 0;
-            }
+                min = 1;almost = 0;}
+                else {
+                almost = 1;min = 0;}
             for (int i = 0; i < longmas.size(); i++) {
                 if (longmas.get(i) < longmas.get(min)) {
                     almost = min;
@@ -48,14 +45,10 @@ public class Main {
     при вызове функций стандартной библиотеки.
     */
         Scanner sc = new Scanner(System.in);
-        while (sc.hasNext("[^\\s]*")) {
-            char[] word = sc.next("[^\\s]*").toCharArray();
-            for (int i = 0; i < word.length / 2; i++) {
-                char buf = word[i];
-                word[i] = word[word.length-1 - i];
-                word[word.length-1 - i] = buf;
-            }
-            for(char c:word)System.out.print(c);
+        while (sc.hasNext("[\\p{L}]*")) {
+            String word = sc.next("[\\p{L}]*");
+            for(int i=word.length()-1;i>=0;i--)
+                System.out.print(word.charAt(i));
             System.out.print(" ");
         }
         System.out.println();
