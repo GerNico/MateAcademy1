@@ -9,9 +9,6 @@ public class Distance {
         findDistance();
     }
 
-    /**
-     * Method findDistance
-     */
     private static void findDistance() {
         Scanner sc = new Scanner(System.in);
         List<Long> longmas = new ArrayList<>();
