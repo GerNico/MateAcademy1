@@ -7,9 +7,6 @@ public class Anagrams {
         anagrams();
     }
 
-    /**
-     * method anagrams read string from console and return every word(letter sequence) in it in reverse order
-     */
     private static void anagrams() {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext("[\\p{L}]*")) {
